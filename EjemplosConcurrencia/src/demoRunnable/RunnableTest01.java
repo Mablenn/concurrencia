@@ -18,7 +18,7 @@ package demoRunnable;
  *
  * @author mab
  */
-public class TestRunnable01 implements Runnable {
+public class RunnableTest01 implements Runnable {
         //Sobreescribir método 'run()'
         public void run(){
             for (int i = 1; i <= 5; i++) {
@@ -28,8 +28,8 @@ public class TestRunnable01 implements Runnable {
 
         public static void main(String[] args) {
             //Objetos de nuestra clase Runnable
-            TestRunnable01 tarea1 = new TestRunnable01();
-            TestRunnable01 tarea2 = new TestRunnable01();
+            RunnableTest01 tarea1 = new RunnableTest01();
+            RunnableTest01 tarea2 = new RunnableTest01();
             //Objetos Thread
             Thread t1 = new Thread(tarea1);
             Thread t2 = new Thread(tarea2);

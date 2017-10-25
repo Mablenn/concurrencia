@@ -10,6 +10,6 @@ package demoRunnable;
  *
  * @author mab
  */
-public class TestRunnable02 {
+public class RunnableTest02 {
     
 }
