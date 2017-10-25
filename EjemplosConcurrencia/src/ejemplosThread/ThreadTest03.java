@@ -24,7 +24,6 @@ public class ThreadTest03 extends Thread {
         }
     }//run()
     
-    
     //============================================================================= //
     public static void main(String[] args) {
         ThreadTest03 hilo1 = new ThreadTest03(("Hilo 1: "));
