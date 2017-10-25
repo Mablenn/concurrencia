@@ -5,9 +5,6 @@
  */
 package ejemplosThread;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 /**
  *
  * @author mab
@@ -19,8 +16,7 @@ public class ThreadTest02 extends Thread{
     public ThreadTest02(String name) {
         this.nombre = name;
     }
-    
-    
+        
     public void run(){
         if ( nombre.equals("tarea1")){
             try {
@@ -30,7 +26,7 @@ public class ThreadTest02 extends Thread{
             }
         }
         for (int i = 0; i < 10; i++) {
-            System.out.println("Ejecutándo hilo " + nombre);
+            System.out.println("Ejecutándo hilo: " + nombre);
         }
     }
     
