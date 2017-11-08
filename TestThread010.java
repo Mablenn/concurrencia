@@ -1,7 +1,7 @@
 /**
  * Clase ejemplo de Thread. Lanzará varios hilos desde el main.
- * De los hilos que se ejecutarán, unos los harán invocando el método 'start()', otros serán ejecutados
- * invocándo el método 'run()', y así podemos comprobar cuales se ejecutan concurrentemente
+ * De los hilos que se ejecutarán, unos lo harán invocando el método 'start()', otros serán ejecutados
+ * invocándo el método 'run()', de este modo podemos comprobar cuales se ejecutan concurrentemente
  * y cuales de forma secuencial.
  */
 package ejemplosThread;
