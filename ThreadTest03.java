@@ -1,7 +1,7 @@
 /**
  * Clase que hereda de Thread, en el método run() haremos que
  * cada hilo que sea lanzado, duerma un número determinado de segundo, el hilo
- * que al crearlo le pasamos como parámetro el número 1, este tardará más tiempo
+ * que al crearlo le pasemos como parámetro el número 1, tardará más tiempo
  * que los demás en terminar su ejecución.
  * 
  *  1 - Crear clase que herede de Thread
