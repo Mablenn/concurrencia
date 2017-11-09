@@ -4,7 +4,7 @@
  * 
  *  1 - Crear clase que herede de Thread.
  *  2 - Sobreescribir método run(). 
- *  3 - Crear instancia de la clase Thread creada.
+ *  3 - Crear objeto de la clase Thread creada.
  *  4 - Iniciar el thread ejecutándo el método start()
  */
 
@@ -33,7 +33,7 @@ public class ThreadTest01 extends Thread{
     }
     
     public static void main(String[] args) {
-        // 3 - Crear instancia de la clase Thread creada.
+        // 3 - Crear objeto de la clase Thread creada.
         ThreadTest01 tarea1 = new ThreadTest01("Tarea 1");
         ThreadTest01 tarea2 = new ThreadTest01("Tarea 2");
         ThreadTest01 tarea3 = new ThreadTest01("Tarea 3");

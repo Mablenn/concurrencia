@@ -1,5 +1,4 @@
 <h1>Concurrencia en Java</h1>
-<p>En informática, la multitarea se conoce como la posibilidad de que una máquina realice varias tareas a la vez. En realidad es una impresión (salvo en equipos con varios procesadores) que se consigue repartiendo el tiempo y recursos entre varios procesos.</p>
-<p>La palabra Thread (hilo) hace referencia a un flujo de control dentro de un programa. La capacidad que permiten los threads a un programa reside en que se puede ejecutar más de un hilo a la vez.</p>
+<p>En Java, para conseguir que varias tareas se ejecuten de forma simultánea, tenemos los threads (hilos). Un thread no es más que una clase que hereda de la clase Thread y sobreescribe su método run(), donde se escribirá el código con las instrucciones de la tarea que el hilo debe llevar a cabo.</p>
 <h2>Método sleep()</h2>
 <h2>Método yield()</h2>
