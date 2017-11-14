@@ -1,47 +1,59 @@
 /*
- * Demo del método 'yield()'
+ * Demo método 'yield()'
  * Utilización de una inner class
  * 
  * Con este ejemplo, conseguimos que el scheduler del procesador distribuya el tiempo
- * del procesador entre los hilos que están ejecutándose.
+ * del procesador entre los hilos que están ejecutándose. No se ejecutan los hilos de 
+ * forma secuencial.
  */
 
 package ejemplosThread;
+
+import static java.lang.Thread.yield;
 
 /**
  *
  * @author renton
  */
-public class ThreadTest04 extends Thread {
+public class ThreadTest04 {
 
     public static void main(String[] args) {
     
-        NyThread hilo1 = new NyThread("AAA");
-        NyThread hilo2 = new NyThread("BBB");
-        NyThread hilo3 = new NyThread("CCC");
+        DemoThread hilo1 = new DemoThread("Hilo AAA",30);
+        DemoThread hilo2 = new DemoThread("Hilo BBB",10);
+        DemoThread hilo3 = new DemoThread("Hilo CCC",15);
+        DemoThread hilo4 = new DemoThread("Hilo DDD",50);
+        DemoThread hilo5 = new DemoThread("Hilo EEE",25);
+        DemoThread hilo6 = new DemoThread("Hilo FFF",30);
+        DemoThread hilo7 = new DemoThread("Hilo GGG",50);
         
         hilo1.start();
         hilo2.start();
         hilo3.start();
-    }
+        hilo4.start();
+        hilo5.start();
+        hilo6.start();
+        hilo7.start();
+         
+    } // main
     
-    static class NyThread extends Thread{
+    static class DemoThread extends Thread{
     
         String nombreHilo;
+        int t;
         
-        public NyThread(String nombre){this.nombreHilo = nombre;}
-
+        public DemoThread(String nombre, int t){ 
+            this.nombreHilo = nombre; 
+            this.t = t;
+        }
+        
         public void run(){
-            try {
-                Thread.sleep(1500);
-                for (int i = 1; i < 11; i++) {
-                    System.out.println(nombreHilo + " -> " + i);
-                    //Repartir el tiempo de ejecución entre los hilos
-                    yield();
-                }
-            }
-            catch(Exception e){
-                e.printStackTrace();
+            for (int i = 0; i < t; ) {
+                System.out.println("\t\t\t" + nombreHilo + " -> iteración " + ++i);
+                if (i >= 20){
+                   yield();
+                   System.out.println();
+                } 
             }
         }
     }
