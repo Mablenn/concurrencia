@@ -23,7 +23,7 @@ public class Ejemplo01 implements Runnable{
 	
 	//Ejecutar la clase
 	public static void main(String[] args) {
-		//Instancia a dos threads, a los que se le pasa como parámetro
+		//Instancia a tres threads, a los que se le pasa como parámetro
 		//un objeto de la clase que hemos creado
 		Thread hilo1 = new Thread(new Ejemplo01("HILO 1"));
 		Thread hilo2 = new Thread(new Ejemplo01("HILO 2"));
